@@ -1,0 +1,117 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Posts Section Section
+--------------------------------------------------------------*/
+.posts-section {
+  .post-item {
+    overflow: hidden;
+    background-color: var(--surface-color);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      .post-img img {
+        transform: scale(1.1);
+      }
+    }
+
+    .post-img {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      max-height: 350px;
+      border-radius: 8px;
+
+      img {
+        transition: 0.5s;
+      }
+
+      .post-category {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        padding: 6px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .post-content {
+      padding-top: 20px;
+
+      time {
+        display: block;
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+
+        a {
+          color: var(--heading-color);
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        margin: 0;
+      }
+    }
+  }
+
+  .post-list {
+    .post-item {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .post-img {
+        flex: 0 0 160px;
+        margin-right: 20px;
+
+        img {
+          border-radius: 4px;
+        }
+      }
+
+      .post-content {
+        padding: 0;
+
+        h3 {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+
+        .post-img {
+          flex: 0 0 auto;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .post-content {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

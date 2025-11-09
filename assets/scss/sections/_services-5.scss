@@ -1,0 +1,244 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services 5 Section
+--------------------------------------------------------------*/
+.services-5 {
+  .featured-service {
+    background: var(--surface-color);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 30px 0 color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 36px;
+        color: var(--accent-color);
+        transition: all 0.3s ease;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px 0 color-mix(in srgb, var(--default-color), transparent 85%);
+
+      .icon {
+        background: var(--accent-color);
+        transform: scale(1.1);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .service-item {
+    background: var(--surface-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px 0 color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px 0 color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .service-header {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .service-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 20px 0 color-mix(in srgb, var(--accent-color), transparent 50%);
+
+        i {
+          font-size: 24px;
+          color: var(--contrast-color);
+        }
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+
+    .service-content {
+      padding: 30px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        flex: 1;
+      }
+
+      .service-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 25px 0;
+
+        li {
+          padding: 8px 0;
+          display: flex;
+          align-items: center;
+
+          i {
+            color: var(--accent-color);
+            margin-right: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .service-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+        .price {
+          font-size: 20px;
+          font-weight: 600;
+          color: var(--accent-color);
+        }
+
+        .btn-get-started {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          padding: 10px 20px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          border: 2px solid var(--accent-color);
+
+          &:hover {
+            background: transparent;
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured-service {
+      padding: 30px 20px;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+
+        i {
+          font-size: 28px;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    .service-item {
+      .service-header {
+        img {
+          height: 200px;
+        }
+
+        .service-icon {
+          width: 50px;
+          height: 50px;
+
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .service-content {
+        padding: 20px;
+
+        h3 {
+          font-size: 20px;
+        }
+
+        .service-footer {
+          flex-direction: column;
+          gap: 15px;
+
+          .btn-get-started {
+            padding: 12px 30px;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
