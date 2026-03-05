@@ -1,0 +1,281 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Courses Section
+--------------------------------------------------------------*/
+.courses {
+  .program-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--default-color), transparent 92%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+      box-shadow: 0 4px 12px color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+  }
+
+  .card-media {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .program-card:hover & img {
+      transform: scale(1.03);
+    }
+  }
+
+  .card-header-area {
+    padding: 24px 24px 0;
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+
+      a {
+        color: var(--heading-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .card-description {
+      font-size: 14px;
+      line-height: 1.6;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 0;
+    }
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 12px;
+    line-height: 1.6;
+
+    &.highlight {
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+
+    &.fresh {
+      background: color-mix(in srgb, #10b981, transparent 90%);
+      color: #10b981;
+      border: 1px solid color-mix(in srgb, #10b981, transparent 70%);
+    }
+
+    &.accredited {
+      background: color-mix(in srgb, #f59e0b, transparent 90%);
+      color: #f59e0b;
+      border: 1px solid color-mix(in srgb, #f59e0b, transparent 70%);
+    }
+
+    &.trending {
+      background: color-mix(in srgb, #ef4444, transparent 90%);
+      color: #ef4444;
+      border: 1px solid color-mix(in srgb, #ef4444, transparent 70%);
+    }
+
+    &.level {
+      background: color-mix(in srgb, var(--default-color), transparent 94%);
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    }
+
+    &.level-beginner {
+      background: color-mix(in srgb, #10b981, transparent 92%);
+      color: #10b981;
+      border: 1px solid color-mix(in srgb, #10b981, transparent 75%);
+    }
+
+    &.level-intermediate {
+      background: color-mix(in srgb, #f59e0b, transparent 92%);
+      color: #f59e0b;
+      border: 1px solid color-mix(in srgb, #f59e0b, transparent 75%);
+    }
+
+    &.level-advanced {
+      background: color-mix(in srgb, #ef4444, transparent 92%);
+      color: #ef4444;
+      border: 1px solid color-mix(in srgb, #ef4444, transparent 75%);
+    }
+  }
+
+  .card-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    margin-top: 16px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: color-mix(in srgb, var(--default-color), transparent 35%);
+
+      i {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+
+        &.bi-star-fill {
+          color: #fbbf24;
+        }
+      }
+    }
+  }
+
+  .card-footer-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+
+    .tutor-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tutor-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    }
+
+    .tutor-meta {
+      strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--heading-color);
+        line-height: 1.3;
+      }
+
+      span {
+        font-size: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 45%);
+        font-weight: 500;
+      }
+    }
+
+    .cost-label {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--heading-color);
+      letter-spacing: -0.01em;
+
+      &.free {
+        font-size: 14px;
+        font-weight: 600;
+        color: #10b981;
+        background: color-mix(in srgb, #10b981, transparent 90%);
+        padding: 4px 12px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .action-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    margin: 0 24px 24px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: auto;
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 10%);
+      color: var(--contrast-color);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--heading-color), transparent 80%);
+    }
+
+    i {
+      font-size: 14px;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover i {
+      transform: translateX(4px);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .card-media {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-header-area {
+      padding: 16px 16px 0;
+    }
+
+    .card-details {
+      padding: 12px 16px;
+      gap: 12px;
+    }
+
+    .card-footer-area {
+      padding: 12px 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .action-link {
+      margin: 0 16px 16px;
+    }
+
+    .card-media {
+      height: 160px;
+    }
+  }
+}

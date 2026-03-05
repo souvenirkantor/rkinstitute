@@ -1,0 +1,477 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Terms Of Service Section
+--------------------------------------------------------------*/
+.terms-of-service {
+
+  // Header Styles
+  .terms-header {
+    text-align: center;
+    padding-bottom: 48px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    margin-bottom: 32px;
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+
+    .update-info {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-size: 0.875rem;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Quick Navigation
+  .quick-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--default-color), transparent 94%);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-label {
+      font-weight: 600;
+      color: var(--heading-color);
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      a {
+        padding: 8px 16px;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+        color: var(--accent-color);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  // Terms Body
+  .terms-body {
+    .terms-article {
+      display: flex;
+      gap: 32px;
+      padding: 40px 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+      scroll-margin-top: 100px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .article-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: color-mix(in srgb, var(--accent-color), transparent 70%);
+        line-height: 1;
+        min-width: 60px;
+        font-family: var(--heading-font);
+
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+
+      .article-content {
+        flex: 1;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 16px;
+          color: var(--heading-color);
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+          }
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          line-height: 1.8;
+          font-size: 1rem;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Highlight Cards
+  .highlight-card {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 24px;
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .card-text {
+      flex: 1;
+
+      h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+      }
+    }
+
+    &.info {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 94%);
+
+      .card-icon {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+
+        i {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    &.warning {
+      background-color: color-mix(in srgb, #f59e0b, transparent 92%);
+
+      .card-icon {
+        background-color: color-mix(in srgb, #f59e0b, transparent 80%);
+
+        i {
+          color: #d97706;
+        }
+      }
+
+      h5 {
+        color: #b45309;
+      }
+    }
+
+    &.notice {
+      background-color: color-mix(in srgb, #8b5cf6, transparent 92%);
+
+      .card-icon {
+        background-color: color-mix(in srgb, #8b5cf6, transparent 80%);
+
+        i {
+          color: #7c3aed;
+        }
+      }
+    }
+  }
+
+  // Checklist
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background-color: var(--surface-color);
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+
+      i {
+        font-size: 1.25rem;
+        color: var(--accent-color);
+      }
+
+      span {
+        font-size: 0.9375rem;
+        color: color-mix(in srgb, var(--default-color), transparent 15%);
+      }
+    }
+  }
+
+  // Restrictions Grid
+  .restrictions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+
+    .restriction-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      background-color: color-mix(in srgb, #ef4444, transparent 96%);
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, #ef4444, transparent 85%);
+
+      i {
+        font-size: 1.25rem;
+        color: #dc2626;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9375rem;
+        color: color-mix(in srgb, var(--default-color), transparent 15%);
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // Disclaimer Panel
+  .disclaimer-panel {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 24px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 20px;
+      background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      i {
+        font-size: 1.125rem;
+        color: var(--accent-color);
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 0.9375rem;
+        color: var(--heading-color);
+      }
+    }
+
+    .panel-list {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        font-size: 0.9375rem;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.5;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 6px;
+          height: 6px;
+          background-color: var(--accent-color);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  // Terms Footer
+  .terms-footer {
+    margin-top: 64px;
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: 40px;
+      background: linear-gradient(135deg,
+          var(--accent-color) 0%,
+          color-mix(in srgb, var(--accent-color), #000 20%) 100%);
+      border-radius: 16px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+      }
+
+      .footer-text {
+        h4 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--contrast-color);
+          margin-bottom: 8px;
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+          }
+        }
+
+        p {
+          color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+          margin: 0;
+          font-size: 1rem;
+        }
+      }
+
+      .footer-actions {
+        display: flex;
+        gap: 12px;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn-primary-action,
+        .btn-secondary-action {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 14px 24px;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 0.9375rem;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+
+          i {
+            font-size: 1.125rem;
+          }
+        }
+
+        .btn-primary-action {
+          background-color: var(--contrast-color);
+          color: var(--accent-color);
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px color-mix(in srgb, #000, transparent 80%);
+          }
+        }
+
+        .btn-secondary-action {
+          background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+          color: var(--contrast-color);
+          border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
+
+          &:hover {
+            background-color: color-mix(in srgb, var(--contrast-color), transparent 75%);
+          }
+        }
+      }
+    }
+  }
+
+  @media print {
+
+    .terms-footer,
+    .quick-nav {
+      display: none;
+    }
+
+    .terms-article {
+      page-break-inside: avoid;
+    }
+  }
+}

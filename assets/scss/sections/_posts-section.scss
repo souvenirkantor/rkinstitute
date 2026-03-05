@@ -1,0 +1,169 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Posts Section Section
+--------------------------------------------------------------*/
+.posts-section {
+  --background-color: #ffffff;
+  --default-color: #000000;
+  --heading-color: #000000;
+  --accent-color: #0b5394;
+  --surface-color: #eeeeee;
+
+  .post-card {
+    background: var(--surface-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+
+    .post-content {
+      padding: 1.5rem;
+    }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      i {
+        color: var(--accent-color);
+        font-size: 1rem;
+      }
+
+      span {
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+      }
+    }
+
+    .post-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+      font-weight: 700;
+
+      a {
+        color: var(--default-color);
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .post-excerpt {
+      margin-bottom: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      font-size: 0.875rem;
+    }
+
+    .read-more {
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:after {
+        content: "\F285";
+        font-family: "bootstrap-icons";
+        transition: transform 0.3s ease;
+      }
+
+      &:hover:after {
+        transform: translateX(5px);
+      }
+    }
+
+    &.post-card-large {
+      .post-image {
+        max-height: 400px;
+      }
+
+      .post-title {
+        font-size: 1.75rem;
+      }
+
+      .post-excerpt {
+        font-size: 1rem;
+      }
+
+      .post-content {
+        padding: 2rem;
+      }
+    }
+
+    &.post-card-horizontal {
+      .post-image {
+        height: 100%;
+      }
+
+      .post-content {
+        padding: 1.25rem;
+      }
+
+      .post-meta {
+        gap: 1rem;
+      }
+
+      .post-title {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .post-excerpt {
+        margin-bottom: 0.75rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      @media (max-width: 767.98px) {
+        .post-image {
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .post-card-horizontal {
+      .row {
+        flex-direction: column;
+      }
+
+      .post-content {
+        padding: 1.25rem;
+      }
+    }
+  }
+}

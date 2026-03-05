@@ -1,0 +1,150 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  position: relative;
+  background: linear-gradient(180deg,
+      color-mix(in srgb, var(--accent-color), transparent 98%),
+      color-mix(in srgb, var(--accent-color), transparent 95%));
+
+  .heading {
+    padding: 160px 0 40px;
+    text-align: center;
+
+    .subtitle {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      position: relative;
+      padding: 0 10px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background-color: var(--accent-color);
+      }
+
+      &::before {
+        left: -35px;
+      }
+
+      &::after {
+        right: -35px;
+      }
+    }
+
+    .heading-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .breadcrumbs {
+    padding: 20px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .container {
+      ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.95rem;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          &:not(:last-child) {
+            padding-right: 0.75rem;
+            margin-right: 0.75rem;
+            position: relative;
+
+            &::after {
+              content: "/";
+              position: absolute;
+              right: -2px;
+              color: color-mix(in srgb, var(--default-color), transparent 50%);
+            }
+          }
+
+          a {
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: var(--accent-color);
+            }
+
+            i {
+              font-size: 1rem;
+            }
+          }
+
+          &.current {
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .heading {
+      padding: 60px 0 30px;
+
+      .heading-title {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .heading {
+      .subtitle {
+        font-size: 0.9rem;
+
+        &::before,
+        &::after {
+          width: 20px;
+        }
+
+        &::before {
+          left: -25px;
+        }
+
+        &::after {
+          right: -25px;
+        }
+      }
+
+      .heading-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

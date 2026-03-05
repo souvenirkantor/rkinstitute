@@ -1,0 +1,225 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  .offering-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: var(--surface-color);
+    border-radius: 12px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 85%);
+
+      .offering-indicator {
+        height: 100%;
+      }
+
+      .offering-icon-wrap {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+
+        i {
+          color: var(--contrast-color);
+          transform: rotateY(180deg);
+        }
+      }
+
+      .explore-btn {
+        color: var(--accent-color);
+        gap: 10px;
+      }
+    }
+  }
+
+  .offering-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 40%));
+    border-radius: 0 4px 4px 0;
+    transition: height 0.4s ease;
+  }
+
+  .offering-icon-wrap {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    transition: all 0.4s ease;
+
+    i {
+      font-size: 26px;
+      color: var(--accent-color);
+      transition: all 0.4s ease;
+    }
+  }
+
+  .offering-body {
+    flex: 1;
+    min-width: 0;
+
+    .offering-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      a {
+        color: var(--heading-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .offering-header h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+  }
+
+  .featured-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: var(--contrast-color);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    i {
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover i {
+      transform: translateX(3px);
+    }
+  }
+
+  .action-banner {
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 40%));
+    border-radius: 16px;
+    padding: 45px 40px;
+    color: var(--contrast-color);
+
+    h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--contrast-color);
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+    }
+
+    .action-btn {
+      display: inline-block;
+      background: var(--contrast-color);
+      color: var(--accent-color);
+      padding: 14px 34px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px color-mix(in srgb, #000, transparent 80%);
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px color-mix(in srgb, #000, transparent 70%);
+        color: var(--accent-color);
+      }
+    }
+
+    @media (max-width: 992px) {
+      text-align: center;
+
+      p {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 35px 25px;
+
+      h3 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .offering-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    .offering-body {
+      .offering-header {
+        justify-content: center;
+      }
+    }
+
+    .offering-icon-wrap {
+      width: 56px;
+      height: 56px;
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Events 7 Section
+--------------------------------------------------------------*/
+.events-7 {
+  .card {
+    border: 0;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    position: relative;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent;
+
+    &:hover {
+      transform: translateY(-10px);
+
+      .card-img img {
+        transform: scale(1.1);
+      }
+
+      .card-body {
+        border-color: var(--accent-color);
+      }
+
+      .btn-learn-more {
+        color: var(--contrast-color);
+        background: var(--accent-color);
+        padding-right: 35px;
+
+        i {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .card-img {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 15px 15px 0 0;
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+
+  .card-body {
+    z-index: 10;
+    background: var(--surface-color);
+    border-top: 4px solid transparent;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: -30px;
+    border-radius: 0 0 15px 15px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card-meta {
+    margin-bottom: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    font-size: 14px;
+
+    i {
+      color: var(--accent-color);
+      font-size: 16px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .date,
+    .time {
+      vertical-align: middle;
+    }
+  }
+
+  .card-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    a {
+      color: var(--heading-color);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  .card-text {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .card-footer {
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .location {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-size: 14px;
+
+      i {
+        color: var(--accent-color);
+        font-size: 16px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      span {
+        vertical-align: middle;
+      }
+    }
+
+    .btn-learn-more {
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease-in-out;
+      padding: 8px 25px;
+      border-radius: 50px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+
+      i {
+        margin-left: 5px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card {
+      padding: 0 15px;
+    }
+
+    .card-img {
+      width: calc(100% + 30px);
+      margin-left: -15px;
+
+      img {
+        height: 200px;
+      }
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      .btn-learn-more {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

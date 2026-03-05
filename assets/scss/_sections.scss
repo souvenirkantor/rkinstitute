@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 50px;
+      height: 2px;
+      background: var(--accent-color);
+      display: inline-block;
+    }
+
+    &:before {
+      margin: 0 15px 10px 0;
+    }
+
+    &:after {
+      margin: 0 0 10px 15px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @media(max-width: 768px) {
+    h2 {
+      font-size: 20px;
+
+      &:before,
+      &:after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: var(--accent-color);
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@import './sections/_hero.scss';
+@import './sections/_about.scss';
+@import './sections/_services.scss';
+@import './sections/_portfolio.scss';
+@import './sections/_why-us.scss';
+@import './sections/_testimonials.scss';
+@import './sections/_team.scss';
+@import './sections/_contact.scss';
+@import './sections/_faq-2.scss';
+@import './sections/_portfolio-details.scss';
+@import './sections/_service-details.scss';
+@import './sections/_services-2.scss';
+@import './sections/_terms-of-service.scss';
+@import './sections/_privacy.scss';
+@import './sections/_about-3.scss';
+@import './sections/_about-2.scss';
+@import './sections/_cards.scss';
+@import './sections/_call-to-action.scss';
+@import './sections/_courses.scss';
+@import './sections/_events.scss';
+@import './sections/_academics.scss';
+@import './sections/_event-details.scss';
+@import './sections/_venue.scss';
+@import './sections/_gallery.scss';
+@import './sections/_gallery-2.scss';
+@import './sections/_post-list.scss';
+@import './sections/_pagination-2.scss';
+@import './sections/_post-details.scss';
+@import './sections/_posts-section.scss';
+@import './sections/_projects.scss';
+@import './sections/_call-to-action-2.scss';
+@import './sections/_projects-2.scss';
+@import './sections/_post-details-2.scss';
+@import './sections/_posts-section-2.scss';
+@import './sections/_hero-2.scss';
+@import './sections/_about-4.scss';
+@import './sections/_services-3.scss';
+@import './sections/_portfolio-2.scss';
+@import './sections/_why-us-2.scss';
+@import './sections/_testimonials-2.scss';
+@import './sections/_team-2.scss';
+@import './sections/_contact-2.scss';
+@import './sections/_faq.scss';
+@import './sections/_events-5.scss';
+@import './sections/_events-7.scss';
+@import './sections/_event-details-2.scss';
